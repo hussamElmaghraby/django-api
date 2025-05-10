@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+#         Django REST framework
+    'rest_framework',
+
+#         Your apps
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -67,6 +73,16 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'myapi.wsgi.application'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': [
+        'rest_framework.renderers.JSONRenderer',
+    ],
+    'DEFAULT_PARSER_CLASSES': [
+        'rest_framework.parsers.JSONParser',
+    ],
+}
 
 
 # Database
